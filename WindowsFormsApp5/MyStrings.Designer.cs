@@ -61,56 +61,65 @@ namespace WindowsFormsApp5 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Atmoshphere:.
+        ///   Looks up a localized string similar to e2dcdb3b85d1a123bfc2afb2842fc959.
         /// </summary>
-        internal static string Atmoshphere {
+        internal static string APIKEY {
             get {
-                return ResourceManager.GetString("Atmoshphere", resourceCulture);
+                return ResourceManager.GetString("APIKEY", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Weather of Bengaluru.
+        ///   Looks up a localized string similar to Mumbai.
         /// </summary>
-        internal static string Bengaluru {
+        internal static string City1 {
             get {
-                return ResourceManager.GetString("Bengaluru", resourceCulture);
+                return ResourceManager.GetString("City1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Humidity:.
+        ///   Looks up a localized string similar to Delhi.
         /// </summary>
-        internal static string Humidity {
+        internal static string City2 {
             get {
-                return ResourceManager.GetString("Humidity", resourceCulture);
+                return ResourceManager.GetString("City2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Weather of Madikeri.
+        ///   Looks up a localized string similar to Kolkata.
         /// </summary>
-        internal static string Madikeri {
+        internal static string City3 {
             get {
-                return ResourceManager.GetString("Madikeri", resourceCulture);
+                return ResourceManager.GetString("City3", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Temperature:.
+        ///   Looks up a localized string similar to Chennai.
         /// </summary>
-        internal static string Temperature {
+        internal static string City4 {
             get {
-                return ResourceManager.GetString("Temperature", resourceCulture);
+                return ResourceManager.GetString("City4", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Weather of Varanasi.
+        ///   Looks up a localized string similar to Bangalore.
         /// </summary>
-        internal static string Varanasi {
+        internal static string City5 {
             get {
-                return ResourceManager.GetString("Varanasi", resourceCulture);
+                return ResourceManager.GetString("City5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tick.
+        /// </summary>
+        internal static string Tick {
+            get {
+                return ResourceManager.GetString("Tick", resourceCulture);
             }
         }
     }

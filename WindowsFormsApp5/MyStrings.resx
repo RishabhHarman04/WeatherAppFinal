@@ -117,22 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Atmoshphere" xml:space="preserve">
-    <value>Atmoshphere:</value>
+  <data name="APIKEY" xml:space="preserve">
+    <value>e2dcdb3b85d1a123bfc2afb2842fc959</value>
   </data>
-  <data name="Bengaluru" xml:space="preserve">
-    <value>Weather of Bengaluru</value>
+  <data name="City1" xml:space="preserve">
+    <value>Mumbai</value>
   </data>
-  <data name="Humidity" xml:space="preserve">
-    <value>Humidity:</value>
+  <data name="City2" xml:space="preserve">
+    <value>Delhi</value>
   </data>
-  <data name="Madikeri" xml:space="preserve">
-    <value>Weather of Madikeri</value>
+  <data name="City3" xml:space="preserve">
+    <value>Kolkata</value>
   </data>
-  <data name="Temperature" xml:space="preserve">
-    <value>Temperature:</value>
+  <data name="City4" xml:space="preserve">
+    <value>Chennai</value>
   </data>
-  <data name="Varanasi" xml:space="preserve">
-    <value>Weather of Varanasi</value>
+  <data name="City5" xml:space="preserve">
+    <value>Bangalore</value>
+  </data>
+  <data name="Tick" xml:space="preserve">
+    <value>Tick</value>
   </data>
 </root>

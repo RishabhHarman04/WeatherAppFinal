@@ -13,48 +13,52 @@ namespace WindowsFormsApp5
 {
     public partial class SettingForm : Form
     {
-        public static List<string> FinalCities = new List<string>();
-        public static string FinalRefreshTime = "";
+        public WeatherSettings Settings { get; set; }
+
         public SettingForm()
         {
             InitializeComponent();
+            Settings = new WeatherSettings();
         }
-
+        public class WeatherSettings
+        {
+            public List<string> Cities { get; set; }
+            public string RefreshTime { get; set; }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cities = string.Empty;
+            if (checkedListBoxCities.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Please select at least one city.");
+                return;
+            }
+            Settings.Cities = new List<string>();
             foreach (var item in checkedListBoxCities.CheckedItems)
             {
-                FinalCities.Add(item.ToString());
-                cities += item.ToString() + ",";
+                Settings.Cities.Add(item.ToString());
             }
-            cities = cities.TrimEnd(',');
-            Console.WriteLine(cities);
-            FinalRefreshTime = comboBoxTime.SelectedItem.ToString();
-
-            MessageBox.Show("Settings saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Form1 form1 = new Form1();
-            form1.ShowDialog();
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            Settings.RefreshTime = numericUpDownTime.Value.ToString();
+            this.Hide();
+            WeatherData form1 = new WeatherData(Settings);
+            form1.Show();
         }
 
         private void SettingForm_Load_1(object sender, EventArgs e)
         {
-            checkedListBoxCities.Items.Add("Mumbai");
-            checkedListBoxCities.Items.Add("Delhi");
-            checkedListBoxCities.Items.Add("Kolkata");
-            checkedListBoxCities.Items.Add("Chennai");
-            checkedListBoxCities.Items.Add("Bangalore");
+            checkedListBoxCities.Items.Add(MyStrings.City1);
+            checkedListBoxCities.Items.Add(MyStrings.City2);
+            checkedListBoxCities.Items.Add(MyStrings.City3);
+            checkedListBoxCities.Items.Add(MyStrings.City4);
+            checkedListBoxCities.Items.Add(MyStrings.City5);
             checkedListBoxCities.CheckOnClick = true;
 
-            comboBoxTime.Items.Add("5");
-            comboBoxTime.Items.Add("10");
-            comboBoxTime.Items.Add("15");
+            numericUpDownTime.Minimum = 5;
+            numericUpDownTime.Maximum = 15;
+            numericUpDownTime.Value = 5;
+            numericUpDownTime.Increment = 5;
         }
     }
+
 }
+
